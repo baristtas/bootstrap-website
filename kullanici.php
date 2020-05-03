@@ -52,7 +52,11 @@
                                                 } else {
                                                     echo "Belirtilmemiş / Boş bırakılmış.";
                                                 } ?><br><br>
-                <strong>Şehir:</strong> <?php echo $_POST["sehir"]; ?><br><br>
+                <strong>Şehir:</strong> <?php if ($_POST["sehir"] != "") {
+                                                    echo $_POST["sehir"];
+                                                } else {
+                                                    echo "Belirtilmemiş / Boş bırakılmış.";
+                                                } ?><br><br>
                 <strong>Cinsiyet:</strong> <?php echo $_POST["cinsiyet"]; ?><br><br>
                 <strong> Seçilen ulaşım yolu / yolları:</strong> <br><br />
                 <?php
