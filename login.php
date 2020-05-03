@@ -30,10 +30,10 @@
             </li>
             <li class="nav-item">
                <a class="nav-link " href="./iletisim.html">İletişim</a>
-           </li>
-           <li class="nav-item">
-               <a class="nav-link active" href="./login.html">Giriş</a>
-           </li>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="./login.php">Giriş</a>
+            </li>
          </ul>
       </div>
    </nav>
