@@ -1,0 +1,136 @@
+<!-- Bu sayfa iletişim sayfasıdır. -->
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>İletişim</title>
+</head>
+
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="./index.html">Burak Bağatarhan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Hakkımda<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./ozgecmis.html">Özgeçmiş<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./sehrim.html">Sivas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./mirasimiz.html">Mirasımız</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link " href="./iletisim.php">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./login.php">Giriş</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- main page start -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col">
+                <form id="iletisimFormu" name="iletisimFormu" action="kullanici.php" method="post" onsubmit="return formOnay()">
+                    <h6>Adı*</h6>
+                    <input type="text" name="isim" id="isim"   ><br>
+                    <h6>Soyadı*</h6>
+                    <input type="text" name="soyisim" id="soyisim"   ><br>
+                    <h6>E-Mail*</h6>
+                    <input type="email" name="email" id="email"   ><br>
+                    <h6>TC Kimlik No</h6>
+                    <input type="password" name="tckno" id="tckno" maxlength="11"><br>
+                    <h6>Şehir</h6>
+                    <input type="text" name="sehir" id="sehir"><br>
+                    <br>
+                    <h6>Cinsiyet*</h6>
+                    <div id="radio">
+                    <input type="radio" name="cinsiyet" value="Kadın"  > Kadın<br>
+                        <input type="radio" name="cinsiyet" value="Erkek"   >Erkek<br>
+                        <input type="radio" name="cinsiyet" value="Diğer / Belirtilmemiş"  >Diğer / Belirtmek istemiyorum<br>
+                    </div>
+                    <br>
+                    <h6>Ulaşım seçiminiz</h6>
+                    <label><input type="checkbox" name="ulasimSecimleri[]" value="Otobüs"/> Otobüs</label><br/>
+                    <label><input type="checkbox" name="ulasimSecimleri[]" value="Minibüs"/> Minibüs</label><br/>
+                    <label><input type="checkbox" name="ulasimSecimleri[]" value="Taksi"/> Taksi</label><br/>
+                    <label><input type="checkbox" name="ulasimSecimleri[]" value="Metro"/> Metro</label><br/>
+                    <h6>En sevdiğiniz şehirlerarası ulaşım yolu</h6>
+                    <select name="favorite" class="mb-4">
+                        <option value="Uçak">Uçak</option>
+                        <option value="Otobüs">Otobüs</option>
+                        <option value="Şahsi araç">Şahsi araç</option>
+                    </select>
+                    <h6>Bize bırakmak istediğiniz mesaj*</h6>
+                    <textarea    name="mesaj" id="mesaj" cols="30" style="width: 500px; height: 125px;"
+                        rows="10"></textarea><br>
+                    <button type="submit" class="btn-primary ">Gönder</button>
+                    <button type="reset" class="btn-secondary ">Temizle</button><br>
+                    <sub style="color: red;">* = Doldurulması gerekli alanlar.</sub>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- main page end -->
+    <!-- footer start -->
+    <div id="footer"></div>
+    <!-- footer end -->
+    <script>
+    function formOnay() {
+        let isim = document.forms["iletisimFormu"]["isim"].value;
+        let soyisim = document.forms["iletisimFormu"]["soyisim"].value;
+        let email = document.forms["iletisimFormu"]["email"].value;
+        let cinsiyet = document.forms["iletisimFormu"]["cinsiyet"].value;
+        let mesaj = document.forms["iletisimFormu"]["mesaj"].value;
+        let dizi = [];
+        if (isim == ""){
+            dizi.push("İsim");
+        }
+        if (soyisim == ""){
+            dizi.push("Soyisim");
+        }
+        if (email == ""){
+            dizi.push("E-Mail");
+        }
+        if (cinsiyet == ""){
+            dizi.push("Cinsiyet");
+        }
+        if (mesaj == ""){
+            dizi.push("Bırakılacak mesaj");
+        }
+        let bosMesaji = "";
+        if (isim == "" || soyisim == "" || email == "" || cinsiyet == "" || mesaj == "") {
+            for (i = dizi.length; i>0; i--){
+            console.log(dizi[i-1]);
+            bosMesaji =  dizi[i-1] + ", " + bosMesaji ;
+        }
+        alert(bosMesaji + " bölümleri boş bırakılamaz.");
+        return false;
+        }
+        return true;
+        }
+    </script>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./footer.js"></script>
+</body>
+
+</html>
+<!-- git deneme 1 -->
