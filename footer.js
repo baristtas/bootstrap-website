@@ -12,7 +12,7 @@ footer.innerHTML=`
       <li><a class="text-muted" href="./ozgecmis.html">Özgeçmiş</a></li>
       <li><a class="text-muted" href="./sehrim.html">Sivas</a></li>
       <li><a class="text-muted" href="./mirasimiz.html">Mirasımız</a></li>
-      <li><a class="text-muted" href="./iletisim.php">İletişim</a></li>
+      <li><a class="text-muted" href="./iletisim.html">İletişim</a></li>
       <li><a class="text-muted" href="./login.php">Giriş</a></li>
     </ul> 
   </div> 

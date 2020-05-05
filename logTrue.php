@@ -8,7 +8,6 @@
 </head>
 <body>
 <?php
-if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
 if ($_POST['username'] == 'burak' && $_POST['password'] == '1234') {
     echo '<h3>Doğru bilgileri girdin ', $_POST['username'], "<br> Sekiz saniye içinde anasayfaya yönlendirilecek.</h3>";
     header( "refresh:8;url=index.html" );
@@ -16,11 +15,11 @@ if ($_POST['username'] == 'burak' && $_POST['password'] == '1234') {
 }else {
     echo "<script>
     alert('Yanlış bilgi girildi. Tamama tıklanınca login sayfasına yönlendirilecek.');
-    window.location = 'login.html' </script>";
+    window.location = 'login.php' </script>";
     // Alert bir javascript fonksiyonu. Bundan dolayı script etiketiyle yazıldı. Giriş bilgileri yanlışsa alert box açacak.
     // Alert box'ta ok'e basınca login sayfasına geri gideceğiz.
 }
-}
+
 ?>
 </body>
 </html>
