@@ -5,3 +5,5 @@ I made this website for a friend of mine. In the project plan, contact us page w
 NOTE: GITHUB PAGES DOESNT SHOW SERVER SIDE RENDERED PAGES. SO YOU CANT SEE PHP PAGES.
 
 I use wamp64 for developing php pages.
+
+Mirasımız sayfası bu şekilde istendiği için bu kadar kötü görünüyor. Yakın zamanda kaldıracağım.
