@@ -29,9 +29,6 @@
                     <a class="nav-link" href="./sehrim.html">Sivas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./mirasimiz.html">Mirasımız</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link " href="./iletisim.html">İletişim</a>
                 </li>
                 <li class="nav-item">
