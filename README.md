@@ -6,4 +6,4 @@ NOTE: GITHUB PAGES DOESNT SHOW SERVER SIDE RENDERED PAGES. SO YOU CANT SEE PHP P
 
 I use wamp64 for developing php pages.
 
-Mirasımız sayfası bu şekilde istendiği için bu kadar kötü görünüyor. Yakın zamanda kaldıracağım.
+Not: Değişken isimleri Türkçe istendi.
