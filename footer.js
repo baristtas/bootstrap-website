@@ -24,11 +24,11 @@ footer.innerHTML=`
     </ul> 
   </div>
   <div class="col">
-    <h5>SAÜ</h5>
+    <h5>ASÜ</h5>
     <ul class="list-unstyled text-small">
-      <li><a class="text-muted" href="https://www.sakarya.edu.tr/">Sakarya Üniversitesi</a></li>
-      <li><a class="text-muted" href="http://bf.sakarya.edu.tr/">Bilgisayar ve Bilişim Bilimleri Fakültesi</a></li>
-      <li><a class="text-muted" href="http://cs.sakarya.edu.tr/tr">Bilgisayar Mühendisliği</a></li>
+      <li><a class="text-muted" href="http://aksaray.edu.tr/">Aksaray Üniversitesi</a></li>
+      <li><a class="text-muted" href="http://muh.aksaray.edu.tr/">Mühendislik Fakültesi</a></li>
+      <li><a class="text-muted" href="http://eemb.aksaray.edu.tr/">Elektrik - Elektronik Mühendisliği</a></li>
   </div> 
 </div>
 </footer>
